@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserDAO">
+
+	 <!-- 회원가입/ insert 쿼리추가 -->
+    <insert id="join" parameterType="UserDTO">
+    INSERT INTO t_user
+    (user_id, 
+    user_pw, 
+    user_name, 
+    user_email, 
+    user_profile_img)
+VALUES
+    (#{userId}, 
+    #{userPw}, 
+    #{userName}, 
+    #{userEmail},  
+    #{userProfileImg});
+    </insert>
+
+
+</mapper>
