@@ -9,7 +9,7 @@
 <body>
 	<form action="Login" method="post">
 		<input type="text" name="user_id" placeholder="Enter your ID" required>
-		<button type="submit">Login</button>
+		<button type="submit">Login2</button>
 	</form>
 
 </body>
