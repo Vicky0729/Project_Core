@@ -7,7 +7,6 @@
 <properties resource="DataBase/db.properties"></properties>
 <typeAliases>
 <typeAlias type="Model.BoardDTO" alias="BoardDTO"/>
-<typeAlias type="Model.RecipeDTO" alias="RecipeDTO"/>
 <typeAlias type="Model.UserDTO" alias="UserDTO"/>
 <!-- 삽입필요 : 나머지 DTO들 추가해줘여함!!!!!! -->
 </typeAliases>
@@ -25,7 +24,6 @@
   <mappers>
   <!-- 삽입필요 : 나머지 DTO들 추가해줘여함!!!!!! -->
     <mapper resource="DataBase/BoardMapper.xml"/>
-    <mapper resource="DataBase/RecipeMapper.xml"/>
     <mapper resource="DataBase/UserMapper.xml"/>
   </mappers>
 </configuration>
