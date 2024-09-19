@@ -55,8 +55,8 @@
 				</div>
 
 				<div class="input_container design_text joinPageInput">
-					<input type="text" name="userPw" placeholder="PW를 입력하세요" /> <input
-						type="text" name="user_pw_Check" placeholder="PW 확인" /> <input
+					<input type="password" name="userPw" placeholder="PW를 입력하세요" /> <input
+						type="password" name="user_pw_Check" placeholder="PW 확인" /> <input
 						id="JoinPageInputEmail" type="text" name="userEmail"
 						placeholder="이메일을 입력하세요" />
 				</div>
