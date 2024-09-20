@@ -3,7 +3,7 @@
 <mapper namespace="UserDAO">
 
 	 <!-- 회원가입/ insert 쿼리추가 -->
-    <insert id="join" parameterType="UserDTO">
+<insert id="join" parameterType="UserDTO" returnType="int">
     INSERT INTO t_user
     (user_id, 
     user_pw, 

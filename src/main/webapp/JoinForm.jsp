@@ -30,22 +30,21 @@
 
 				<!-- 타이틀 위치 (가로 배치, 폰트 사이즈 조정) -->
 				<h2 class="title_text" id="joinPageLogoTitle">
-					<span class="title_text title_1">냉장고를</span> <br /> 
-					<span class="title_text title_2">부탁해!</span>
+					<span class="title_text title_1">냉장고를</span> <br /> <span
+						class="title_text title_2">부탁해!</span>
 				</h2>
 			</div>
 
 			<!-- 회원가입 정보 입력창 -->
 			<form action="JoinService" method="post">
-				<div class="input_container design_text joinPageInput">
+				<div class="input_container design_text joinPageInput" required>
 					<input type="text" name="userName" placeholder="이름 또는 별명을 입력하세요" />
 					<input type="text" name="userId" placeholder="ID를 입력하세요" />
 				</div>
 
 				<!-- ID 중복체크 버튼 -->
 				<div class="JoinPageIdCheck-container">
-					<button class="btn b_pink" id="joinPageIdCheckBtn" type="submit"
-						name="idCheck" value="btn-New-ID">
+					<button class="btn b_pink" id="joinPageIdCheckBtn" type="button" onclick="idCheck()">
 						<span class="design_text" id="joinPageIdCheckBtnTxt">중복확인</span>
 					</button>
 					<!-- ⭐⭐ 추후, Script로 hidden 메세지 추가 
@@ -55,8 +54,8 @@
 				</div>
 
 				<div class="input_container design_text joinPageInput">
-					<input type="text" name="userPw" placeholder="PW를 입력하세요" /> <input
-						type="text" name="user_pw_Check" placeholder="PW 확인" /> <input
+					<input type="password" name="userPw" placeholder="PW를 입력하세요" /> <input
+						type="password" name="user_pw_Check" placeholder="PW 확인" /> <input
 						id="JoinPageInputEmail" type="text" name="userEmail"
 						placeholder="이메일을 입력하세요" />
 				</div>

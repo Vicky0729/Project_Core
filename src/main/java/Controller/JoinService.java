@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Model.UserDAO;
 import Model.UserDTO;
@@ -15,6 +16,7 @@ public class JoinService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	  
 		request.setCharacterEncoding("UTF-8");
+		
 		
 		// JoinForm에서 받아온 내용
 		String userId = request.getParameter("userId");
@@ -34,9 +36,13 @@ public class JoinService extends HttpServlet {
 	   UserDTO dto = new UserDTO(userId,userEmail,userName,userPw,userProfileImg);
 	   UserDAO dao = new UserDAO();
 	   
+	   boolean isIdDuplicated = dao.isIdDuplicated(userId); 
+	   
 	   int result = dao.join(dto);
 	    
 	   if(result>0) { 
+		   HttpSession session = request.getSession();
+		   session.setAttribute("user_id", userId);
 		   response.sendRedirect("Home.jsp");
 	   }else {
 		   System.out.println("회원가입실패");
